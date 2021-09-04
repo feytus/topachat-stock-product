@@ -39,9 +39,9 @@ def check_product_on_stock(product_link):
         logging.info(f"Product : '{product_link}' is out of Stock")
         return False
 
-product = input("Entrez le lien topachat de votre produit : ")
+product = input("Enter the link from the page of the product (from topachat.com) : ")
 logging.info("Selected product : " + product)
-time_to_sleep = int(input("Tous les combiens de temps souhaitez-vous vérifier si votre produit est en stock ou non ? (en seconde) "))
+time_to_sleep = int(input("Select an interval of seconds : "))
 logging.info("Interval : " + str(time_to_sleep) + "seconds")
 while True:
     check_product_on_stock(product)
