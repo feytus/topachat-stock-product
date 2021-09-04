@@ -42,7 +42,7 @@ def check_product_on_stock(product_link):
 product = input("Entrez le lien topachat de votre produit : ")
 logging.info("Selected product : " + product)
 time_to_sleep = int(input("Tous les combiens de temps souhaitez-vous vérifier si votre produit est en stock ou non ? (en seconde) "))
-logging.info("Interval : " + time_to_sleep + "seconds")
+logging.info("Interval : " + str(time_to_sleep) + "seconds")
 while True:
     check_product_on_stock(product)
     time.sleep(time_to_sleep)
