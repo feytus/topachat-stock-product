@@ -4,6 +4,8 @@ import time
 from datetime import datetime
 import logging
 import os
+from colorama import Fore, Back, Style
+
 
 full_date = datetime.now()
 date = full_date.strftime('%Y-%m-%d-%H-%M-%S')
@@ -29,15 +31,16 @@ def check_product_on_stock(product_link):
     on_stock = doc.find_all(text="Rupture de stock")
 
     if on_stock == []:
-        print(date + f" Product : '{product_link}' is in Stock")
-        logging.info(f" Product : '{product_link}' is in Stock")
+        print(date + f"{Fore.GREEN} Product : '{product_link}' is in Stock{Fore.RESET}")
+        logging.info(f"Product : '{product_link}' is in Stock")
         return True
     elif on_stock == ['Rupture de stock']:
-        print(date + f" Product : '{product_link}' is out of Stock")
-        logging.info(f" Product : '{product_link}' is out of Stock")
+        print(date + f"{Fore.RED} Product : '{product_link}' is out of Stock{Fore.RESET}")
+        logging.info(f"Product : '{product_link}' is out of Stock")
         return False
 
 product = input("Entrez le lien topachat de votre produit : ")
+time_to_sleep = int(input("Tous les combiens de temps souhaitez-vous vérifier si votre produit est en stock ou non ? (en seconde) "))
 while True:
     check_product_on_stock(product)
-    time.sleep(5)
+    time.sleep(time_to_sleep)
