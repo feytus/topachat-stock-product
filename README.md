@@ -1,5 +1,5 @@
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
-[![License](https://img.shields.io/github/license/feytus/neptunbot?style=for-the-badge)](https://github.com/feytus/NeptunBOT/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/feytus/neptunbot?style=for-the-badge)](https://github.com/feytus/top-achat-product/blob/main/LICENSE)
 
 ___
 
